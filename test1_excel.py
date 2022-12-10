@@ -13,24 +13,32 @@ def openWorkbook(xlapp, xlfile):
 
 #get the line number of the last cell empty from one given column
 def get_empty_line(_cells, start_line, _column):
+    # Initialize the value and count variables
     value = 0
     count = 0
+    # Loop until we find a cell with a value of None
     while value is not None:
         count += 1
-        value = _cells(count, _column).Value       
+        value = _cells(count, _column).Value
+    # Return the line number of the first empty cell
     return count
 
-#clear cells given a start line and column and a end line and column
+
 def clear_cells(_cells, start_line, end_line , start_column, end_column):
+    # Increment the end coordinates by 1 to include the end cells in the range
     end_line += 1
     end_column = chr(ord(end_column) + 1)
+    # Loop through each column in the specified range
     _column = start_column
     while _column != end_column:
+        # Loop through each line in the specified range
         _line = start_line
         while _line != end_line:
+            # Set the value of the cell at the given coordinates to None
             _cells(_line, _column).Value = None 
             _line += 1
-        _column = chr(ord(_column) + 1) # Increment the character by 1
+        # Increment the column character by 1
+        _column = chr(ord(_column) + 1)
 
 
 try:
@@ -40,11 +48,9 @@ try:
     excel.Visible = True
     cells = ws.Cells
     #write code here
-    #cells(6,"A").Value = "OK"  
     
     #get the last line from a given column
     number_empty_line = get_empty_line(cells, 1, "A")
-    print(number_empty_line)
     
     #clear cells(cells, start_line, end_line , start_column, end_column) 
     clear_cells(cells, 1, 1, "A", "D")
