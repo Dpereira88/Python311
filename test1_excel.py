@@ -72,7 +72,7 @@ try:
     #clear cells(cells, start_line, end_line , start_column, end_column) 
     #clear_cells(cells, 1, 1, "A", "D")
     list_values = [[1,2,3,4,5,6,7,8],["A","B","C","D","E"]]
-    insert_values_from_list(cells, list_values, 4, "D")
+    insert_values_from_list(cells, list_values, 6, "D")
 
 except Exception as e:
     print(e)
