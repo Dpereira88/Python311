@@ -23,7 +23,7 @@ def openWorkbook(xlapp, xlfile):
 def get_empty_line(_cells, start_line, _column):
     # Initialize the value and count variables
     value = 0
-    count = 0
+    count = start_line
     # Loop until we find a cell with a value of None
     while value is not None:
         count += 1
