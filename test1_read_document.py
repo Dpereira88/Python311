@@ -34,7 +34,7 @@ def convert_to_List_of_Lists(value):
     return newList
 
 
-link_document = 'Requirements.txt'
+link_document = 'document_for_tests.txt'
 
 value = read_document(link_document)
 
