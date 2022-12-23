@@ -26,6 +26,14 @@ def read_document_last_lines(directory, number_of_last_lines):
 # takes in a list of strings and returns
 # a new list where each element is a list of strings, split from the original string by whitespace.
 def convert_to_List_of_Lists(value):
+    """_summary_
+
+    Args:
+        value (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """    
     newList=[]
     # Loop over each element in the input list
     for x in value:
