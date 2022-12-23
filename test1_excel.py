@@ -6,7 +6,8 @@ Author: Dpereira88
 """
 
 
-
+# win32com don't work with pyinstaller
+#need use the openpyxl
 import win32com.client as win32
 
 def openWorkbook(xlapp, xlfile):
